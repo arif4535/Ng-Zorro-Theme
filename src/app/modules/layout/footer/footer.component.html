@@ -1,0 +1,35 @@
+<!-- <ag-grid-angular 
+    style="width: auto; height: 200px;" 
+    class="ag-theme-alpine-dark"
+    [rowData]="rowData" 
+    [columnDefs]="columnDefs">
+    
+</ag-grid-angular> -->
+<div class="container py-5">
+  <div class="row">
+    <div class="col-4">
+      <canvas id="line_chart" style="position: relative;" width="400px" height="400px"></canvas>
+      <h3 class="text-center mt-3">Line Chart</h3>
+    </div>
+    <div class="col-4">
+      <canvas id="bar_chart" width="400px" height="400px"></canvas>
+      <h3 class="text-center mt-3">Bar Chart</h3>
+    </div>
+    <div class="col-4">
+        <canvas id="pie_chart" style="height:400px; width:400px"></canvas>
+        <h3 class="text-center mt-3">Pie Chart</h3>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-md-6">
+    <!-- <ag-grid-angular 
+    style="width: auto; height: 400px;" 
+    class="ag-theme-alpine-dark"
+    [rowData]="rowData" 
+    [columnDefs]="columnDefs">
+    
+    </ag-grid-angular> -->
+    <app-user-management></app-user-management>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="modal-header color  ">
+    <h4 class="text-center">Attantion!!</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body ">
+  <form >
+    <p class="h5 text-center">Are you sure you want to delete ??</p> 
+  <div class="form-group col-md-6">
+    <label for="inputPassword4" >Password</label>
+    <input type="password" class="form-control" id="inputPassword4" placeholder="To confirm enter the" >
+  </div>  
+</form>
+    <div class="modal-footer">
+      <button type="button"
+        class="btn btn-outline-dark"
+        (click)="activeModal.close(false)">Cancel</button>
+        <button type="button"
+        class="btn btn-outline-dark"
+        (click)="deletdata()">delete</button>
+    </div>
+  </div>
+  <!-- <div class="modal-header">
+    <h4 class="modal-title">Delete Note</h4>
+    <button type="button" class="close btn" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <h5>
+      Your are about to delete this note.
+      Are you sure ?
+    </h5>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-success" (click)="confirm()">Delete</button>
+    <button class="btn btn-danger ms-3" (click)="activeModal.dismiss('Cross click')">Cancel</button>
+</div> -->

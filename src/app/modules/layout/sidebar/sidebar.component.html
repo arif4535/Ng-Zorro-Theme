@@ -1,0 +1,81 @@
+<nz-layout class="app-layout">
+    <nz-sider class="menu-sidebar"
+              nzCollapsible
+              nzWidth="256px"
+              nzBreakpoint="md"
+              [(nzCollapsed)]="isCollapsed"
+              [nzTrigger]="null">
+      <div class="sidebar-logo">
+          <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+          <h1>Ant Design Of Angular</h1>
+      </div>
+      <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+        <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
+          <ul>
+            <li nz-menu-item nzMatchRouter>
+              <a routerLink="/welcome">Welcome</a>
+            </li>
+            <li nz-menu-item nzMatchRouter>
+              <a [routerLink]='["auth"]'>Auth</a>
+            </li>
+            <li nz-menu-item nzMatchRouter>
+              <a>Monitor</a>
+            </li>
+            <li nz-menu-item nzMatchRouter>
+              <a>Workplace</a>
+            </li>
+          </ul>
+        </li>
+        <li nz-submenu nzOpen nzTitle="Form" nzIcon="form">
+          <ul>
+            <li nz-menu-item nzMatchRouter>
+              <a>Basic Form</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+    <nz-layout>
+      <nz-header>
+        <div class="app-header">
+            <ul nz-menu nzTheme="dark" nzMode="horizontal">
+              <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+                <span class="trigger"
+                   nz-icon
+                   [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+
+                ></span>
+            </span>
+         
+            <li nz-menu-item nzMatchRouter> <a routerLink="/auth">HOME</a></li>
+            <li nz-menu-item nzMatchRouter>
+              <a routerLink="/user">USER</a>
+            </li>
+            <li nz-menu-item nzMatchRouter>
+              <a routerLink="/menu">MENU</a>
+            </li>
+            <li nz-menu-item nz-menu-item nzMatchRouter>
+              <a routerLink="/content">Buton</a></li>
+            <a nz-dropdown [nzDropdownMenu]="menu">
+              Dropdown
+              <span nz-icon nzType="down"></span>
+            </a>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+              <ul nz-menu nzSelectable>
+                <li nz-menu-item>Item1</li>
+                <li nz-menu-item>Item2</li>
+                <li nz-menu-item>Item3</li>
+              </ul>
+            </nz-dropdown-menu>
+          </ul>
+        </div>
+      </nz-header>
+      <nz-content>
+        <div class="inner-content">
+          <router-outlet></router-outlet>
+        </div>
+      </nz-content>
+      <nz-footer> ArifDeğirmenci © 2023 Copyright  </nz-footer>
+    </nz-layout>
+  </nz-layout>
+  
